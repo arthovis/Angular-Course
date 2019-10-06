@@ -1,0 +1,35 @@
+<!-- iterate using ngFor -->
+<ul>
+    <li *ngFor="let person of people">
+        {{person.name}} - {{person.age}}
+    </li>
+</ul>
+
+<!-- iterate using ngFor with index -->
+<ul>
+    <li *ngFor="let person of people; let i = index">
+        {{i+1}} {{person.name}} - {{person.age}}
+    </li>
+</ul>
+
+<!-- NgIf -->
+<ul *ngFor="let person of people">
+    <li *ngIf="person.age < 30">
+        {{person.name}} - {{person.age}}
+    </li>
+</ul>
+
+<!-- ngSwitch -->
+<ul *ngFor="let person of people" [ngSwitch]="person.country">
+    <li *ngSwitchCase="'UK'">{{person.name}}</li>
+    <li *ngSwitchCase="'USA'">{{person.name}}</li>
+    <li *ngSwitchCase="'HK'">{{person.name}}</li>
+    <li *ngSwitchDefault>{{person.name}}</li>
+</ul>
+
+<!-- ngStyle -->
+<ul *ngFor="let person of peopleWithoutColor">
+    <li [style.color]=getColor(person.country)>
+        {{person.name}} - {{person.country}}
+    </li>
+</ul>
