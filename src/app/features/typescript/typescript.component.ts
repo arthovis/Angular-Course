@@ -5,7 +5,7 @@ import { Signal } from './signal';
 @Component({
   selector: 'app-typescript',
   templateUrl: './typescript.component.html',
-  styleUrls: ['./typescript.component.css']
+  styleUrls: ['./typescript.component.scss']
 })
 export class TypescriptComponent implements OnInit {
   // string
