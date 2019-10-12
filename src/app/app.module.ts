@@ -8,6 +8,9 @@ import { DataBindingComponent } from './features/data-binding/data-binding.compo
 import { EventBindingComponent } from './features/event-binding/event-binding.component';
 import { BuiltInDirectivesComponent } from './features/built-in-directives/built-in-directives.component';
 import { CustomPipesComponent } from './features/custom-pipes/custom-pipes.component';
+import { ComponentInteractionComponent } from './features/component-interaction/component-interaction.component';
+import { ParentComponent } from './features/component-interaction/parent/parent.component';
+import { ChildComponent } from './features/component-interaction/parent/child/child.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,13 @@ import { CustomPipesComponent } from './features/custom-pipes/custom-pipes.compo
     CustomPipesComponent,
 
     // pipes
-    ZeroPaddingPipe
+    ZeroPaddingPipe,
+
+    ComponentInteractionComponent,
+
+    ParentComponent,
+
+    ChildComponent
   ],
   imports: [
     BrowserModule
