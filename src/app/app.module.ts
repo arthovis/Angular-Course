@@ -11,6 +11,8 @@ import { CustomPipesComponent } from './features/custom-pipes/custom-pipes.compo
 import { ComponentInteractionComponent } from './features/component-interaction/component-interaction.component';
 import { ParentComponent } from './features/component-interaction/parent/parent.component';
 import { ChildComponent } from './features/component-interaction/parent/child/child.component';
+import { TemplateDrivenComponent } from './features/forms/template-driven/template-driven.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -28,10 +30,13 @@ import { ChildComponent } from './features/component-interaction/parent/child/ch
 
     ParentComponent,
 
-    ChildComponent
+    ChildComponent,
+
+    TemplateDrivenComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
