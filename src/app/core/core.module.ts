@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { UsersService } from './services/users.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [],
@@ -14,7 +15,8 @@ import { UsersService } from './services/users.service';
     ToastrModule.forRoot({
       timeOut: 2000,
       preventDuplicates: true
-    })
+    }),
+    HttpClientModule
   ],
   providers: [
     UsersService
