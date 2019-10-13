@@ -18,6 +18,8 @@ import { CoreModule } from './core/core.module';
 import { NotificationsComponent } from './features/notifications/notifications.component';
 import { ModelDrivenComponent } from './features/forms/model-driven/model-driven.component';
 import { HttpObservablesComponent } from './features/http/http-observables/http-observables.component';
+import { ListUsersComponent } from './features/crud/list-users/list-users.component';
+import { AddUserComponent } from './features/crud/add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,11 @@ import { HttpObservablesComponent } from './features/http/http-observables/http-
 
     ModelDrivenComponent,
 
-    HttpObservablesComponent
+    HttpObservablesComponent,
+
+    ListUsersComponent,
+
+    AddUserComponent
   ],
   imports: [
     CoreModule,
