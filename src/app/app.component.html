@@ -1,15 +1,46 @@
 <h2>Living in hello!</h2>
 
-<app-typescript></app-typescript>
+<span>ng-group 10</span>
 
-<app-data-binding></app-data-binding>
+<mat-list>
+    <mat-list-item>
+        <button mat-button [routerLink] = "['/', 'Data-binding']">Data Binding</button>
+    </mat-list-item>
 
-<app-event-binding></app-event-binding>
+    <mat-list-item>
+        <button mat-button [routerLink] = "['/', 'event-binding']">Event Binding</button>
+    </mat-list-item>
 
-<app-built-in-directives></app-built-in-directives>
+    <mat-list-item>
+        <button mat-button [routerLink] = "['/', 'Typescript']">TypeScript</button>
+    </mat-list-item>
 
-<app-custom-pipes></app-custom-pipes>
+    <mat-list-item>
+        <button mat-button [routerLink] = "['/', 'built-in-directives']">Built-in Directives</button>
+    </mat-list-item>
 
-<app-component-interaction></app-component-interaction>
+    <mat-list-item>
+        <button mat-button [routerLink] = "['/', 'custom-pipes']">Custom Pipes</button>
+    </mat-list-item>
 
-<app-template-driven></app-template-driven>
+    <mat-list-item>
+        <button mat-button [routerLink] = "['/', 'component-interaction']">Component Interaction</button>
+    </mat-list-item>
+
+    <mat-list-item>
+        <button mat-button [routerLink] = "['/', 'template-driven']">Template Driven</button>
+    </mat-list-item>
+
+    <mat-list-item>
+        <button mat-button [routerLink] = "['/', 'model-driven']">Model Driven</button>
+    </mat-list-item>
+
+    <mat-list-item>
+        <button mat-button [routerLink] = "['/', 'notifications']">Notifications</button>
+    </mat-list-item>
+
+</mat-list>
+
+<div>
+    <router-outlet></router-outlet>
+</div>

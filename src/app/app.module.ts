@@ -13,6 +13,11 @@ import { ParentComponent } from './features/component-interaction/parent/parent.
 import { ChildComponent } from './features/component-interaction/parent/child/child.component';
 import { TemplateDrivenComponent } from './features/forms/template-driven/template-driven.component';
 import { SharedModule } from './shared/shared.module';
+import { appRouting } from './app.routes';
+import { CoreModule } from './core/core.module';
+import { NotificationsComponent } from './features/notifications/notifications.component';
+import { ModelDrivenComponent } from './features/forms/model-driven/model-driven.component';
+import { HttpObservablesComponent } from './features/http/http-observables/http-observables.component';
 
 @NgModule({
   declarations: [
@@ -32,11 +37,18 @@ import { SharedModule } from './shared/shared.module';
 
     ChildComponent,
 
-    TemplateDrivenComponent
+    TemplateDrivenComponent,
+
+    NotificationsComponent,
+
+    ModelDrivenComponent,
+
+    HttpObservablesComponent
   ],
   imports: [
-    BrowserModule,
-    SharedModule
+    CoreModule,
+    SharedModule,
+    appRouting
   ],
   providers: [],
   bootstrap: [AppComponent]
