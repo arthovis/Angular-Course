@@ -1,3 +1,7 @@
+import { CrudModule } from './features/crud/crud.module';
+import { CoreModule } from './core/core.module';
+import { appRouting } from './app.routes';
+import { SharedModule } from './shared/shared.module';
 import { ZeroPaddingPipe } from './shared/pipes/zero-padding.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -12,15 +16,9 @@ import { ComponentInteractionComponent } from './features/component-interaction/
 import { ParentComponent } from './features/component-interaction/parent/parent.component';
 import { ChildComponent } from './features/component-interaction/parent/child/child.component';
 import { TemplateDrivenComponent } from './features/forms/template-driven/template-driven.component';
-import { SharedModule } from './shared/shared.module';
-import { appRouting } from './app.routes';
-import { CoreModule } from './core/core.module';
 import { NotificationsComponent } from './features/notifications/notifications.component';
 import { ModelDrivenComponent } from './features/forms/model-driven/model-driven.component';
 import { HttpObservablesComponent } from './features/http/http-observables/http-observables.component';
-import { ListUsersComponent } from './features/crud/list-users/list-users.component';
-import { AddUserComponent } from './features/crud/add-user/add-user.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,27 +32,18 @@ import { AddUserComponent } from './features/crud/add-user/add-user.component';
     ZeroPaddingPipe,
 
     ComponentInteractionComponent,
-
     ParentComponent,
-
     ChildComponent,
-
     TemplateDrivenComponent,
-
     NotificationsComponent,
-
     ModelDrivenComponent,
-
-    HttpObservablesComponent,
-
-    ListUsersComponent,
-
-    AddUserComponent
+    HttpObservablesComponent
   ],
   imports: [
     CoreModule,
     SharedModule,
-    appRouting
+    appRouting,
+    CrudModule
   ],
   providers: [],
   bootstrap: [AppComponent]

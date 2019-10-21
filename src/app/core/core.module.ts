@@ -5,11 +5,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { UsersService } from './services/users.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
+    SharedModule,
     BrowserModule, // browser support
     BrowserAnimationsModule, // for animations
     ToastrModule.forRoot({
